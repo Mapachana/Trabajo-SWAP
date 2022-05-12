@@ -16,13 +16,7 @@ Con la transición a la computación en la nube surge la necesidad de crear sist
 
 Un centro de datos está compuesto por componentes informáticos como routers, switches, firewalls, sistemas de almacenamiento masivo de datos y sistemas de cómputo. Para que funcionen a pleno rendimiento, es esencial saber cómo organizar estos sistemas; tanto informática como físicamente. A fin de cuentas, es inevitable tener que combatir el archienemigo de la electricidad: \textbf{el calor}.
 
-Cualquier dispositivo tecnológico está condenado a producir calor para operar. Esto es inevitable. Si tenemos en en cuenta la concentración de equipamiento que se produce en un CPD, disipar el calor producido por todos se vuelve un problema serio. Si no se refrigeraran, su vida útil se acortaría, la capacidad de cómputo se vería mermada debido al \textit{thermal throttling} de las CPUs modernas, el \textit{downtime} aumentaría significativamente... Además, las consecuencias medioambientales serían desastrosas. Por todo estos motivos, debemos buscar métodos de transferencia de calor.
-
-
-En este trabajo abordaremos la última parte. En particular, estudiaremos las diferentes \textbf{técnicas de refrigeración} de un centro de datos, comparando las diferentes soluciones.
-
-\section{¿Por qué es importante la refrigeración?}
-
+Cualquier dispositivo tecnológico está condenado a producir calor para operar. Esto es inevitable. Si tenemos en en cuenta la concentración de equipamiento que se produce en un CPD, disipar el calor producido por todos se vuelve un problema serio. Si no se refrigeraran, su vida útil se acortaría, la capacidad de cómputo se vería mermada, el \textit{downtime} aumentaría significativamente... Además, las consecuencias medioambientales serían desastrosas. Por todo estos motivos, debemos buscar métodos de transferencia de calor.
 
 Se estima que, en 2020, el consumo de los centros de datos supuso un 1 - 1.5\% de la producción de electricidad global \cite{mytton-dc}. Con la llegada de la pandemia y la transición al trabajo remoto, esta cifra ha debido aumentar en los últimos dos años; y la tendencia sigue en aumento. Aunque las arquitecturas modernas necesitan menos energía para operar con un uso bajo, el consumo medio de un rack es de 7 kW, llegando a picos de incluso 20 kW por rack \cite{datacenters-density}.
 
@@ -35,6 +29,11 @@ El sistema de refrigeración puede suponer hasta un 40\% del consumo energético
     \includegraphics[scale=1]{consumo}
     \end{center}
 \end{figure}
+
+Por lo tanto, es esencial mantener bajo control el consumo energético del CPD
+
+En este trabajo abordaremos la última parte. En particular, estudiaremos las diferentes \textbf{técnicas de refrigeración} de un centro de datos, comparando las diferentes soluciones.
+
 
 \section{Cómo funciona un sistema de refrigeración}
 
@@ -137,7 +136,8 @@ En la imagen \ref{hot_aisle} podemos observar un esquema del funcionamiento de e
 
 Esta técnica es capaz de utilizar la baja humedad relativa del aire para incorporar agua y evaporarla, por lo que consigue lograr una importante reducción de temperatura. Una ventaja es que no necesita un importante consumo energético.
 
-En la imagen \ref{adiabatic_coolers} se muestra un 
+En la imagen \ref{adiabatic_coolers} se muestra un dispositivo para realizar el enfriamiento adiabático.
+
 \begin{figure}
     \begin{center}
     \caption{Enfriamientos adiabáticos}
