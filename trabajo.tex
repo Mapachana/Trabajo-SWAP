@@ -1,3 +1,5 @@
+% LTeX: language=spanish
+
 Refrigeración de centros de datos
 
 Autores: Ana Buendía Ruiz-Azuaga, Andrés Millán Muñoz, Paula Villanueva Núñez.
@@ -5,44 +7,46 @@ Autores: Ana Buendía Ruiz-Azuaga, Andrés Millán Muñoz, Paula Villanueva Nú�
 
 \section*{Introducción}
 
-Con la transición a la computación en la nube surge la necesidad de crear sistemas para suplir los requisitos de usuarios y organizaciones. Los centros de procesamientos de datos (CPD; en inglés, data centers) son los lugares donde se instala el equipamiento necesario para conseguir este objetivo.
+Con la transición a la computación en la nube surge la necesidad de crear sistemas para suplir los requisitos de usuarios y organizaciones. Los \textbf{centros de procesamientos de datos} (CPD; en inglés, \textit{data centers}) son los lugares donde se instala el equipamiento necesario para conseguir este objetivo.
 
 En general, un centro de datos está compuesto por routers, switches, firewalls, sistemas de almacenamiento masivo de datos, sistemas de cómputo… Para que un centro de datos funcione a pleno rendimiento, es esencial saber cómo organizar estos sistemas; tanto informática como físicamente.
 
-En este trabajo abordaremos la última parte. En particular, estudiaremos las diferentes técnicas de refrigeración de un centro de datos, comparando las diferentes soluciones.
+En este trabajo abordaremos la última parte. En particular, estudiaremos las diferentes \textbf{técnicas de refrigeración} de un centro de datos, comparando las diferentes soluciones.
 
 \subsection*{¿Por qué es importante la refrigeración?}
 
 
-Cualquier dispositivo tecnológico está condenado a producir calor para operar. Esto es inevitable. Teniendo en cuenta la concentración de equipamiento que se produce en un CPD, disipar el calor producido por todos se vuelve un problema serio. Si no se refrigeraran los equipos, su vida útil se acortaría, la capacidad de cómputo se vería mermada debido al thermal throttling de las CPUs modernas, el downtime aumentaría significativamente… Además, las consecuencias medioambientales serían desastrosas. Por todo estos motivos, debemos buscar métodos de transferencia de calor.
+Cualquier dispositivo tecnológico está condenado a producir calor para operar. Esto es inevitable. Teniendo en cuenta la concentración de equipamiento que se produce en un CPD, disipar el calor producido por todos se vuelve un problema serio. Si no se refrigeraran los equipos, su vida útil se acortaría, la capacidad de cómputo se vería mermada debido al \textit{thermal throttling} de las CPUs modernas, el \textit{downtime} aumentaría significativamente... Además, las consecuencias medioambientales serían desastrosas. Por todo estos motivos, debemos buscar métodos de transferencia de calor.
 
-Se estima que, en 2020, el consumo de los centros de datos supuso un 1 - 1.5% de la producción de electricidad global^[1]. Con la llegada de la pandemia y la transición al trabajo remoto, esta cifra ha debido aumentar en los últimos dos años; y la tendencia sigue en aumento. Aunque las arquitecturas modernas necesitan menos energía para operar con un uso bajo, el consumo medio de un rack es de 7 kW, llegando a picos de incluso 20 kW por rack [2].
+Se estima que, en 2020, el consumo de los centros de datos supuso un 1 - 1.5\% de la producción de electricidad global^[1]. Con la llegada de la pandemia y la transición al trabajo remoto, esta cifra ha debido aumentar en los últimos dos años; y la tendencia sigue en aumento. Aunque las arquitecturas modernas necesitan menos energía para operar con un uso bajo, el consumo medio de un rack es de 7 kW, llegando a picos de incluso 20 kW por rack [2].
 
-El sistema de refrigeración puede suponer hasta un 40% del consumo energético del CPD. Una parte importante de este 40% la componen los ventiladores (12% del total) y los enfriadores del agua (14% del total) [3]
-
-
-
+El sistema de refrigeración puede suponer hasta un 40\% del consumo energético del CPD. Una parte importante de este 40\% la componen los ventiladores (12\% del total) y los enfriadores del agua (14\% del total) [3]
 
 \subsection*{Cómo funciona un sistema de refrigeración}
 
-Aunque, como veremos más adelante, existen diferentes técnicas de refrigeración, todas tienen como objetivo principal reducir la temperatura de un equipo. Debido al poco espacio disponible en un sistema, todos los métodos usarán algún medio para transferir el calor a otro lugar. Esta es una forma muy eficiente de refrigerar un sistema, pues resulta más sencillo mover todo el calor a otra parte para tratarlo en un lugar específico, en lugar de trabajar equipo a equipo. Esta es la misma base que se utiliza en los ordenadores personales, aunque a una escala mucho mayor.
+Aunque, como veremos más adelante, existen diferentes técnicas de refrigeración, todas tienen como objetivo principal \textbf{reducir la temperatura de un equipo}. Debido al poco espacio disponible en un sistema, todos los métodos usarán algún medio para transferir el calor a otro lugar. Esta es una forma muy eficiente de refrigerar un sistema, pues resulta más sencillo mover todo el calor a otra parte para tratarlo en un lugar específico, en lugar de trabajar equipo a equipo. Esta es la misma base que se utiliza en los ordenadores personales, aunque a una escala mucho mayor.
 
 En general, un sistema de climatización tendrá los siguientes componentes:
-Un generador del medio a utilizar para transferir el calor.
-Una vía por la que viaja el medio. Pueden ser cables, el aire, un pasillo…
-Una fase de transferencia de calor del sistema o habitación al medio.
-Una forma mediante la cual se enfría el medio.
 
-La escala del sistema de refrigeración dependerá de cómo de ambicioso sea el centro de datos. Teniendo en cuenta la tier del CPD [4], se usará un tipo u otro; dependiendo de la robustez que aporten.
+\begin{itemize}
+    \item Un generador del medio a utilizar para transferir el calor.
+    \item Una vía por la que viaja el medio. Pueden ser cables, el aire, un pasillo...
+    \item Una fase de transferencia de calor del sistema o habitación al medio.
+    \item Una forma mediante la cual se enfría el medio.
+\end{itemize}
+
+La escala del sistema de refrigeración dependerá de cómo de ambicioso sea el centro de datos. Teniendo en cuenta la \textit{tier} del CPD [4], se usará un tipo u otro; dependiendo de la robustez que aporten.
 
 
 \section*{Sistemas de climatización}
 
 Para climatizar los centros de datos, existen tres vías principales:
 
-A través del aire. Se basan en conductos de aire para enfriar los diferentes dispositivos. Estos conductos bombean aire frío hacia los equipamientos y luego recogen el aire caliente que sale de estos. De esta forma, se consigue separar el aire caliente del frío. Un importante inconveniente es que este tipo de sistemas requiere un gran consumo de energía.
-A través del agua. Se basan en grandes contenedores de agua fría. El funcionamiento de este tipo de sistemas consiste en bombear el agua a través de las tuberías que pasan entre los dispositivos y los racks. Es importante mantener siempre una barrera entre los dispositivos y el agua que circula, pues si se produce contacto entre ellos se podrían dañar los componentes.
-Inmersión. Se basan en la inmersión de los equipos de IT en un fluido dieléctrico que no conduce la electricidad pero si es capaz de llevarse el calor de los chips de los equipos. Este tipo de sistemas destaca por ser el más eficiente sin necesidad de necesitar sistemas de refrigeración con gases fluorados.
+\begin{itemize}
+    \item \textbf{A través del aire}. Se basan en conductos de aire para enfriar los diferentes dispositivos. Estos conductos bombean aire frío hacia los equipamientos y luego recogen el aire caliente que sale de estos. De esta forma, se consigue separar el aire caliente del frío. Un importante inconveniente es que este tipo de sistemas requiere un gran consumo de energía.
+    \item \textbf{A través del agua}. Se basan en grandes contenedores de agua fría. El funcionamiento de este tipo de sistemas consiste en bombear el agua a través de las tuberías que pasan entre los dispositivos y los racks. Es importante mantener siempre una barrera entre los dispositivos y el agua que circula, pues si se produce contacto entre ellos se podrían dañar los componentes.
+    \item \textbf{Inmersión}. Se basan en la inmersión de los equipos de IT en un fluido dieléctrico que no conduce la electricidad pero si es capaz de llevarse el calor de los chips de los equipos. Este tipo de sistemas destaca por ser el más eficiente sin necesidad de necesitar sistemas de refrigeración con gases fluorados.
+\end{itemize}
 
 \section*{Técnicas de refrigeración}
 
@@ -56,8 +60,6 @@ Este método consiste en dos sistemas, uno de economización de aire y otro de e
 La economización de aire usa el aire del exterior del centro de procesamiento de datos para regular la temperatura de los equipos del interior del CPD, dejándolo entrar a este.
 
 Generalmente, con el fin de evitar que entren la humedad o partículas contaminantes se suele realizar un filtrado del aire.
-
-
 
 Ventajas:
 Permite ahorrar.
@@ -73,9 +75,6 @@ Esta técnica tiene como objetivo separar por completo el aire frío proveniente
 Se alinean los racks en filas alternas (frío/caliente), dejando todas las entradas de aire frío hacia un lado y las salidas de aire caliente hacia el otro.
 
 Así, las filas compuestas por frentes de racks se llaman pasillos fríos, que suelen encfrentar a los conductos de salida del aire acondicionado, y la parte trasera de los racks, por donde se expulsa el aire caliente, se llaman pasillos calientes, que suelen conectarse a los conductos de retorno del aire acondicionado.
-
-
-
 
 Esta técnica suele usarse con falsos suelos y techos para facilitar el paso del aire.
 
@@ -108,7 +107,7 @@ Una unidad CRAH funciona dentro de un sistema más amplio que involucra una plan
 
 \subsubsection*{Refrigeración vectorial calibrada (CVC)}
 
-Esta tecnología de enfriamiento está hecha específicamente para servidores de alta densidad. Optimiza la ruta del flujo de aire a través del equipo para permitir que el sistema de enfriamiento maneje el calor de manera más efectiva, lo que hace posible aumentar la proporción de placas de circuito por chasis de servidor y utilizar menos “enthusiasts” (no sé cómo se traduce enthusiasts aquí).
+Esta tecnología de enfriamiento está hecha específicamente para servidores de alta densidad. Optimiza la ruta del flujo de aire a través del equipo para permitir que el sistema de enfriamiento maneje el calor de manera más efectiva, lo que hace posible aumentar la proporción de placas de circuito por chasis de servidor y utilizar menos “enthusiasts” (\textcolor{red}{no sé cómo se traduce enthusiasts aquí}).
 
 \subsubsection*{Falsos suelos y techos}
 
@@ -128,12 +127,13 @@ Los aires acondicionados usan este mecanismo para mover el calor de una habitaci
 
 Este sistema tiene las siguientes componentes:
 
-El refrigerante, que es el medio que fluye a través del sistema, recolectando y disipando el calor en diferentes áreas.
-El compresor, que es una carga de motor eléctrico y suministra la energía para impulsar el refrigerante a través del sistema.
-El evaporador, que recoge el calor del recinto y facilita la ebullición del refrigerante.
-El condensador, que disipa el calor en el medio ambiente al permitir que el refrigerante vuelva a su estado líquido.
-La válvula de expansión, que actúa como regulador entre el lado de alta y baja presión del sistema y permite la caída de presión y temperatura necesaria para facilitar la expansión directa.
-
+\begin{itemize}
+    \item {\textbf{El refrigerante}}, que es el medio que fluye a través del sistema, recolectando y disipando el calor en diferentes áreas.
+    \item \textbf{El compresor}, que es una carga de motor eléctrico y suministra la energía para impulsar el refrigerante a través del sistema.
+    \item \textbf{El evaporador}, que recoge el calor del recinto y facilita la ebullición del refrigerante.
+    \item \textbf{El condensador}, que disipa el calor en el medio ambiente al permitir que el refrigerante vuelva a su estado líquido.
+    \item \textbf{La válvula de expansión}, que actúa como regulador entre el lado de alta y baja presión del sistema y permite la caída de presión y temperatura necesaria para facilitar la expansión directa.
+\end{itemize}
 
 \subsection*{Agua}
 
@@ -149,7 +149,7 @@ Esta técnica expone el aire caliente al agua, lo que produce la evaporación de
 
 \subsubsection*{Refrigeración por inmersión}
 
-El hardware se sumerge en un fluido dieléctrico no conductor e inflamable (non-flammable era inflamable o flamable?) ¿Inflamable significa flamable?, introduciendo tanto el líquido como el hardware en un contenedor a prueba de fugas.
+El hardware se sumerge en un fluido dieléctrico no conductor e inflamable (\textcolor{red}{non-flammable era inflamable o flamable?}) \textcolor{red}{INFLAMABLE SIGNIFICA FLAMABLE}?, introduciendo tanto el líquido como el hardware en un contenedor a prueba de fugas.
 
 De esta manera el líquido absorbe el calor y el agua caliente se convierte en vapor, para luego condensarse al enfriarse y vuelve al líquido refrigerante, ayudando así a que este se enfríe de nuevo.
 
