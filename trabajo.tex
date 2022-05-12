@@ -2,7 +2,6 @@
 
 % TODO
 
-% Quitar los títulos de la introducción; que se queden como ideas principales.
 % Mencionar sistemas de clim. en la introducción brevemente. Buscar ejemplos concretos para cada uno.
 % Ampliar soluciones corporativas. Bastante.
 % Referencias.
@@ -14,13 +13,13 @@
 
 Con la transición a la computación en la nube surge la necesidad de crear sistemas para suplir los requisitos de usuarios y organizaciones. Los \textbf{centros de procesamientos de datos} (CPD; en inglés, \textit{data centers}) son los lugares donde se instala el equipamiento necesario para conseguir este objetivo.
 
-Un centro de datos está compuesto por componentes informáticos como routers, switches, firewalls, sistemas de almacenamiento masivo de datos y sistemas de cómputo. Para que funcionen a pleno rendimiento, es esencial saber cómo organizar estos sistemas; tanto informática como físicamente. A fin de cuentas, es inevitable tener que combatir el archienemigo de la electricidad: \textbf{el calor}.
+Un centro de datos está compuesto por componentes informáticos como routers, switches, firewalls, sistemas de almacenamiento masivo de datos y sistemas de cómputo. Para que funcionen a pleno rendimiento, es esencial saber cómo organizar estos sistemas; tanto informática como físicamente. No solo es imprescindible gestionar servidores, sino que debemos adaptar el espacio físico disponible a nuestra maquinaria. Generalmente, no dispondremos de mucho espacio. De la mano de una alta densidad de dispositivos funcionando a pleno rendimiento, llega el inevitable archienemigo de la electricidad: \textbf{el calor}.
 
 Cualquier dispositivo tecnológico está condenado a producir calor para operar. Esto es inevitable. Si tenemos en en cuenta la concentración de equipamiento que se produce en un CPD, disipar el calor producido por todos se vuelve un problema serio. Si no se refrigeraran, su vida útil se acortaría, la capacidad de cómputo se vería mermada, el \textit{downtime} aumentaría significativamente... Además, las consecuencias medioambientales serían desastrosas. Por todo estos motivos, debemos buscar métodos de transferencia de calor.
 
-Se estima que, en 2020, el consumo de los centros de datos supuso un 1 - 1.5\% de la producción de electricidad global \cite{mytton-dc}. Con la llegada de la pandemia y la transición al trabajo remoto, esta cifra ha debido aumentar en los últimos dos años; y la tendencia sigue en aumento. Aunque las arquitecturas modernas necesitan menos energía para operar con un uso bajo, el consumo medio de un rack es de 7 kW, llegando a picos de incluso 20 kW por rack \cite{datacenters-density}.
+La solución a nuestros problemas energéticos la aportarán los \textbf{sistemas de refrigeración}.
 
-El sistema de refrigeración puede suponer hasta un 40\% del consumo energético del CPD. Una parte importante de este 40\% la componen los ventiladores (12\% del total) y los enfriadores del agua (14\% del total) \cite{ZHANG2021102253}
+El sistema de refrigeración puede suponer hasta un 40\% del consumo energético del CPD. Una parte importante de este 40\% la componen los ventiladores (12\% del total) y los enfriadores del agua (14\% del total), de acuerdo a los datos de \cite{ZHANG2021102253}. Para facilitar la visualización de estos datos puede verse \eqref{consumo_energetico}.
 
 \begin{figure}
     \begin{center}
@@ -30,10 +29,9 @@ El sistema de refrigeración puede suponer hasta un 40\% del consumo energético
     \end{center}
 \end{figure}
 
-Por lo tanto, es esencial mantener bajo control el consumo energético del CPD
+Se estima que, en 2020, el consumo de los centros de datos supuso un 1 - 1.5\% de la producción de electricidad global \cite{mytton-dc}. Con la llegada de la pandemia y la transición al trabajo remoto, esta cifra ha debido aumentar en los últimos dos años; y la tendencia sigue en aumento. Aunque las arquitecturas modernas necesitan menos energía para operar con un uso bajo, el consumo medio de un rack es de 7 kW, llegando a picos de incluso 20 kW por rack \cite{datacenters-density}.
 
-En este trabajo abordaremos la última parte. En particular, estudiaremos las diferentes \textbf{técnicas de refrigeración} de un centro de datos, comparando las diferentes soluciones.
-
+Por lo tanto, será esencial mantener bajo control el consumo energético del CPD. En este trabajo abordaremos estos dos conceptos: sistemas de refrigeración y su consumo. Estudiaremos las diferentes técnicas que se emplean en un centro de datos, comparando las diferentes soluciones.
 
 \section{Cómo funciona un sistema de refrigeración}
 
@@ -100,7 +98,7 @@ En las imágenes \ref{pasillos} y \ref{traditional_cooling} podemos observar uno
 
 \begin{figure}
     \begin{center}
-    \caption{Esquema de los pasillos calientes y fríos.}
+    \caption{Esquema de los pasillos calientes y fríos \cite{Kelvion}.}
     \label{pasillos}
     \includegraphics[scale=1]{pasillos}
     \end{center}
@@ -141,6 +139,7 @@ En la imagen \ref{adiabatic_coolers} se muestra un dispositivo para realizar el 
 \begin{figure}
     \begin{center}
     \caption{Enfriamientos adiabáticos}
+    % TODO: añadir referencia de kfocus
     \label{adiabatic_coolers}
     \includegraphics[scale=1]{adiabatic_coolers}
     \end{center}
@@ -212,16 +211,17 @@ Cabe destacar que esta técnica es muy eficaz, pues el fluido absorbe el calor m
 
 \section{Soluciones corporativas}
 
-% TODO: ampliar
+% TODO: ampliar. Por ejemplo, añadir imagenes con los productos que ofrecen
 
 En esta sección presentaremos algunas empresas que se dedican a suministrar los productos necesarios para conseguir soluciones de refrigeración para centros de datos.
 
-Un ejemplo es la empresa Systemair, que ofrece una gran variedad de productos en este catálogo para asegurar sistemas de refrigeración energéticamente eficientes, tales como unidades de enfriamiento gratuito, sistemas de enfriamiento evaporativo compacto con pre enfriamiento del aire exterior, condensadores para la expansión directa, etc.
+Un ejemplo es la empresa Systemair \cite{systemair}, que ofrece una gran variedad de productos en este catálogo para asegurar sistemas de refrigeración energéticamente eficientes, tales como unidades de enfriamiento gratuito, sistemas de enfriamiento evaporativo compacto con pre enfriamiento del aire exterior, condensadores para la expansión directa, etc.
 
-Otra alternativa es Clysema, una empresa de servicios energéticos enfocada a mejorar la eficiencia energética de las instalaciones. Ofrecen servicios de gestión y optimización, auditoría, ejecución y mantenimiento.
+Otra alternativa es Clysema \cite{clysema}, una empresa de servicios energéticos enfocada a mejorar la eficiencia energética de las instalaciones. Ofrecen servicios de gestión y optimización, auditoría, ejecución y mantenimiento.
 
-Otras empresas que están ayudando a innovar la industria de los centros de datos son LiquidStack, Submer, Asperitas, Usystems, Munters, Green Revolution Cooling, STULZ, etc.
+Otras empresas que están ayudando a innovar la industria de los centros de datos son LiquidStack \cite{liquidstack}, Submer \cite{submer}, Usystems, Munters, Green Revolution Cooling, STULZ, etc.
 
+La empresa Kelvion \cite{Kelvion} también ofrece métodos eficientes de refrigeración y disipación del calor. En su página web podemos observar todos los dispositivos que ofrece para las distintas técnicas comentadas. % TODO: continuar (Paula)
 
 
 \section{Futuro}
@@ -242,47 +242,4 @@ Este método proporciona una forma muy eficaz de enfriamiento para centros de da
 
 \chapter{Conclusiones}
 
-% TODO
-
-%Bibliografía
-%Data Center Cooling: Future of Cooling Systems, Methods and Technologies (datacenters.com)
-
-%Data Center Cooling 101: A Beginner's Guide to AFM Best Practices and Cooling Optimization - YouTube
-
-%https://clysema.com/tendencias-climatizacion-centros-de-datos/
-
-%https://www.systemair.com/fileadmin/user_upload/systemair-b2b/Local/Turkey/Destek/Medya_Merkezi/Veri_Merkezleri/Systemair-DataCentre-Cooling-Solutions_web.pdf
-
-%https://www.rittaltic.es/importancia-refrigeracion-centros-datos/
-
-%https://journal.uptimeinstitute.com/a-look-at-data-center-cooling-technologies/
-
-%Datacenter Cooling Methods | Datacenter cooling best practices (submer.com)
-
-%Types of Data Center Cooling Techniques - Raritan
-
-%https://www.siberzone.es/blog-sistemas-ventilacion/enfriamiento-adiabatico/
-
-%(152) What Is A Quick-Connect Fitting And How Do They Work? - YouTube
-
-%https://opentextbc.ca/basichvac/chapter/direct-expansion-air-conditioning-systems/
-
-%https://www.airzone.es/blog/ahorro/que-es-el-free-cooling/
-
-%https://blog.logisa.com/blog/diferencia-entre-contencion-de-pasillos-frios-y-de-pasillos-calientes
-
-%Data center - Wikiwand
-
-%What Is a Data Center? - Cisco
-
-%[1] How much energy do data centers use? David Mytton (no sé cómo poner referencias aquí, luego lo vemos)
-
-%[2] The Rising Data Center Power Density and The Resultant Challenges (datacenters.com)
-
-%[3] A survey on data center cooling systems: Technology, power consumption modeling and control strategy optimization - ScienceDirect
-
-%[4] La importancia de la Refrigeración de los Centros de Datos (cofrico.com)
-
-%Choosing the right PC cooling system for you | reichelt.com|Choosing the right PC cooling system for you | reichelt.com
-
-%https://pavimentostecnicos.com/suelo-tecnico/falso-suelo-para-cpd
+% TODO escribir conclusiones.
