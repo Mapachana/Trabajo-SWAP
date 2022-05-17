@@ -121,7 +121,7 @@ En las imágenes \eqref{pasillos} y \eqref{traditional_cooling} podemos observar
 \begin{figure}
     \begin{center}
         \includegraphics[scale=0.7]{pasillos}
-        \caption{Esquema de los pasillos calientes y fríos \cite{Kelvion}.}
+        \caption{Esquema de los pasillos calientes y fríos. Fuente: \cite{Kelvion}.}
         \label{pasillos}
     \end{center}
 \end{figure}
@@ -187,7 +187,7 @@ En estas unidades se suelen usar aparatos como \eqref{custom_air_coils}.
 
 \subsubsection{Refrigeración vectorial calibrada (CVC)}
 
-Esta tecnología de enfriamiento está hecha específicamente para servidores de alta densidad. Optimiza la ruta del flujo de aire a través del equipo para permitir que el sistema de enfriamiento maneje el calor de manera más efectiva, lo que hace posible aumentar la proporción de placas de circuito por chasis de servidor y utilizar menos "enthusiasts" (\textcolor{red}{no sé cómo se traduce enthusiasts aquí}).
+Esta tecnología de enfriamiento está hecha específicamente para servidores de alta densidad. Optimiza la ruta del flujo de aire a través del equipo para permitir que el sistema de enfriamiento maneje el calor de manera más efectiva, lo que hace posible aumentar la proporción de placas de circuito por chasis de servidor y utilizar menos \textit{enthusiasts}.
 
 \subsubsection{Falsos suelos y techos}
 
@@ -231,7 +231,7 @@ En este apartado estudiaremos las distintas técnicas cuya vía principal para c
 
 \subsubsection{Refrigeración por inmersión}
 
-En este método, el hardware se sumerge en un fluido dieléctrico no conductor e inflamable (\textcolor{red}{non-flammable era inflamable o flamable?}) \textcolor{red}{INFLAMABLE SIGNIFICA FLAMABLE}?, introduciendo tanto el líquido como el hardware en un contenedor a prueba de fugas. De esta manera, el líquido absorbe el calor mientras que el agua caliente se convierte en vapor, para luego condensarse al enfriarse y vuelve al líquido refrigerante, ayudando así a que este se enfríe de nuevo.
+En este método, el hardware se sumerge en un fluido dieléctrico no conductor y no inflamable, introduciendo tanto el líquido como el hardware en un contenedor a prueba de fugas. De esta manera, el líquido absorbe el calor mientras que el agua caliente se convierte en vapor, para luego condensarse al enfriarse y vuelve al líquido refrigerante, ayudando así a que este se enfríe de nuevo.
 
 Cabe destacar que esta técnica es muy eficaz, pues el fluido absorbe el calor mucho más eficientemente que el aire.
 
@@ -245,44 +245,30 @@ Otra alternativa es Clysema \cite{clysema}, una empresa de servicios energético
 
 Otras empresas que están ayudando a innovar la industria de los centros de datos son LiquidStack \cite{liquidstack}, Submer \cite{submer}, Usystems \cite{usystems}, Munters, \cite{munters}, Green Revolution Cooling \cite{GRC}, STULZ \cite{stulz}, etc.
 
-La empresa Kelvion \cite{Kelvion} también ofrece métodos eficientes de refrigeración y disipación del calor. En su página web podemos observar todos los dispositivos que ofrece para las distintas técnicas comentadas, como por ejemplo enfriadores secos \eqref{dry_cooler}, Storre de refrigeración \eqref{cooling_tower}, bobinas de aire personalizadas \eqref{custom_air_coils}, condensadores enfriados por aire \eqref{air_cooled_condensers}, bomba dieléctrica \eqref{dielectric_pump}, etc.
+La empresa Kelvion \cite{Kelvion} también ofrece métodos eficientes de refrigeración y disipación del calor. En su página web podemos observar todos los dispositivos que ofrece para las distintas técnicas comentadas, como por ejemplo enfriadores secos \eqref{fig:dry_cooler_cooling_tower} (a), Storre de refrigeración \eqref{fig:dry_cooler_cooling_tower} (b), bobinas de aire personalizadas \eqref{fig:custom_air_coils_air_cooled_condensers} (a), condensadores enfriados por aire \eqref{fig:custom_air_coils_air_cooled_condensers} (b), bomba dieléctrica \eqref{dielectric_pump}, etc.
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.5]{dry_cooler}
-        \caption{Enfriadores secos, \cite{Kelvion}.}
-        \label{dry_cooler}
-    \end{center}
+\begin{figure}%
+    \centering
+    \subfloat[][]{\includegraphics[scale=0.7]{dry_cooler}}%
+    \qquad
+    \subfloat[][]{\includegraphics[scale=0.7]{cooling_tower}}
+    \caption{Enfriadores secos (a) y torre de refrigeración (b). Fuente: \cite{Kelvion}}%
+    \label{fig:dry_cooler_cooling_tower}%
 \end{figure}
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.5]{cooling_tower}
-        \caption{Torre de refrigeración, \cite{Kelvion}.}
-        \label{cooling_tower}
-    \end{center}
+\begin{figure}%
+    \centering
+    \subfloat[][]{\includegraphics[scale=0.7]{custom_air_coils}}%
+    \qquad
+    \subfloat[][]{\includegraphics[scale=0.7]{air_cooled_condensers}}
+    \caption{Bobina de aire personalizadas (a) y condensadores enfriados por aire (b). Fuente: \cite{Kelvion}}%
+    \label{fig:custom_air_coils_air_cooled_condensers}%
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \begin{center}
-        \includegraphics[scale=0.5]{custom_air_coils}
-        \caption{Bobina de aire personalizadas, \cite{Kelvion}.}
-        \label{custom_air_coils}
-    \end{center}
-\end{figure}
-
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.5]{air_cooled_condensers}
-        \caption{Condensadores enfriados por aire, \cite{Kelvion}.}
-        \label{air_cooled_condensers}
-    \end{center}
-\end{figure}
-
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.5]{dielectric_pump}
-        \caption{Bomba dieléctrica, \cite{Kelvion}.}
+        \includegraphics[scale=0.7]{dielectric_pump}
+        \caption{Bomba dieléctrica. Fuente: \cite{Kelvion}.}
         \label{dielectric_pump}
     \end{center}
 \end{figure}
@@ -310,3 +296,21 @@ En este trabajo hemos estudiado y desarrollado los sistemas de climatización, j
 Para finalizar, podemos concluir que las técnicas de enfriamiento que se basan en refrigeración líquida son las más efectivas y que se deben investigar más en el futuro. Además debemos evitar las técnicas que requieran mucha energía y que introduzcan contaminantes y condensación, y desarrollar técnicas más escalables y basadas en las Green IT. Con estas recomendaciones, podremos reducir el impacto climático y disminuir los costes de consumo de los centros de procesamiento de datos.
 
 
+\begin{figure}%
+    \centering
+    \subfloat[][]{...figure code...}%
+    \qquad
+    \subfloat[][]{...figure code...}
+    \caption{Here are the first two figures of a continued figure.}%
+    \label{fig:cont}%
+\end{figure}
+
+\begin{figure}%
+    \ContinuedFloat
+    \centering
+    \subfloat[][]{...figure code...}%
+    \qquad
+    \subfloat[][]{...figure code...}
+    \caption[]{Here are the last two figures of a continued figure.}%
+    \label{fig:cont}%
+\end{figure}
