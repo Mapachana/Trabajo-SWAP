@@ -2,11 +2,11 @@
 
 \chapter{Introducción}
 
-Con la transición a la computación en la nube, surgen los \textbf{centros de procesamiento de datos} como sistemas de procesamiento principales. Atrás se han quedado los tiempos de los ordenadores personales como principal fuente de trabajo. El auge de estos centros ha creado una carrera por optimizar la capacidad de cómputo por unidad de espacio. 
+Con la transición a la computación en la nube, surgen los \textbf{centros de procesamiento de datos} como sistemas de procesamiento principales. Atrás se han quedado los tiempos de los ordenadores personales como principal fuente de trabajo. El auge de estos centros ha creado una carrera por optimizar la capacidad de cómputo por unidad de espacio.
 
-Sin embargo, cualquier dispositivo tecnológico está condenado a producir calor para operar. Esto es inevitable. Teniendo en cuenta la concentración de equipamiento que se produce en un centro de datos, disipar el calor producido se vuelve un problema serio. Si no se refrigeraran, la vida útil de sus componentes se acortaría, su capacidad de cómputo se vería mermada, lo cual haría que aumentara el \textit{downtime} significativamente. Una mala gestión produce efectos negativos en cadena. Además, las consecuencias medioambientales serían desastrosas. Por todo estos motivos, debemos buscar métodos de transferencia de calor. 
+Sin embargo, cualquier dispositivo tecnológico está condenado a producir calor para operar. Esto es inevitable. Teniendo en cuenta la concentración de equipamiento que se produce en un centro de datos, disipar el calor producido se vuelve un problema serio. Si no se refrigeraran, la vida útil de sus componentes se acortaría, su capacidad de cómputo se vería mermada, lo cual haría que aumentara el \textit{downtime} significativamente. Una mala gestión produce efectos negativos en cadena. Además, las consecuencias medioambientales serían desastrosas. Por todo estos motivos, debemos buscar métodos de transferencia de calor.
 
-La solución a nuestros problemas energéticos la aportarán los \textbf{sistemas de refrigeración}. Estos sistemas conseguirán una reducción de la temperatura en el centro de datos; tanto para componente individual como para el edificio en su conjunto. No obstante, su funcionamiento no es trivial: debemos analizar cómo de eficaces son, así como su eficiencia. Un sistema de refrigeración poco eficaz no disminuirá la temperatura de los componentes lo suficiente, pero tampoco podemos permitirnos malgastar electricidad. 
+La solución a nuestros problemas energéticos la aportarán los \textbf{sistemas de refrigeración}. Estos sistemas conseguirán una reducción de la temperatura en el centro de datos; tanto para componente individual como para el edificio en su conjunto. No obstante, su funcionamiento no es trivial: debemos analizar cómo de eficaces son, así como su eficiencia. Un sistema de refrigeración poco eficaz no disminuirá la temperatura de los componentes lo suficiente, pero tampoco podemos permitirnos malgastar electricidad.
 
 En este trabajo abordaremos estos dos conceptos: sistemas de refrigeración y su consumo. Estudiaremos las diferentes técnicas que se emplean en un centro de datos, comparando las diferentes soluciones.
 
@@ -17,7 +17,7 @@ Específicamente, vamos a analizar cómo se comportan las diferentes técnicas d
 
 \chapter{Preliminares}
 
-Los \textbf{centros de procesamiento de datos} (CPD; en inglés, \textit{data centers}) son los lugares físicos donde se instalan sistemas de cómputo y sus componentes asociados \cite{wikipedia-datacenter}. El fin de estos sistemas es muy diverso: pueden usarse para almacenar información, alojar una página web, o proveer un servicio de procesamiento para empresas. Algunos de los componentes que forman un CPD son routers, switches, firewalls o sistemas de almacenamiento masivo de datos. 
+Los \textbf{centros de procesamiento de datos} (CPD; en inglés, \textit{data centers}) son los lugares físicos donde se instalan sistemas de cómputo y sus componentes asociados \cite{wikipedia-datacenter}. El fin de estos sistemas es muy diverso: pueden usarse para almacenar información, alojar una página web, o proveer un servicio de procesamiento para empresas. Algunos de los componentes que forman un CPD son routers, switches, firewalls o sistemas de almacenamiento masivo de datos.
 
 Para que funcionen a pleno rendimiento, es esencial saber cómo organizar estos sistemas; tanto informática como físicamente. No solo es imprescindible gestionar servidores, sino que debemos adaptar el espacio físico disponible a nuestra maquinaria. Generalmente, no dispondremos de mucho; y sumado a una alta densidad de dispositivos funcionando a pleno rendimiento, llega el inevitable archienemigo de la electricidad: \textbf{el calor}.
 
@@ -46,7 +46,7 @@ La escala del sistema de refrigeración dependerá de cómo de ambicioso sea el 
 
 \section{Eficiencia energética de los sistemas de refrigeración}
 
-El sistema de refrigeración puede suponer hasta un 40\% del consumo energético del CPD. Una parte importante de este 40\% la componen los ventiladores (12\% del total) y los enfriadores del agua (14\% del total), de acuerdo a los datos de \cite{ZHANG2021102253}. Para facilitar la visualización de estos datos puede verse \eqref{consumo_energetico}.
+El sistema de refrigeración puede suponer hasta un 40\% del consumo energético del CPD. Una parte importante de este 40\% la componen los ventiladores (12\% del total) y los enfriadores del agua (14\%), de acuerdo a los datos de \cite{ZHANG2021102253}. Para facilitar la visualización de estos datos puede verse \eqref{consumo_energetico}.
 
 \begin{figure}
     \begin{center}
@@ -56,7 +56,7 @@ El sistema de refrigeración puede suponer hasta un 40\% del consumo energético
     \end{center}
 \end{figure}
 
-Se estima que, en 2020, el consumo de los centros de datos supuso un 1 - 1.5\% de la producción de electricidad global \cite{mytton-dc}. Con la llegada de la pandemia y la transición al trabajo remoto, esta cifra ha aumentado en los últimos dos años; y la tendencia es que continúe en crecimiento. Aunque las arquitecturas modernas necesitan menos energía para operar con un uso bajo, el consumo medio de un rack es de 7 kW, llegando a picos de incluso 20 kW por rack \cite{datacenters-density}. Por lo tanto, será esencial mantener bajo control el consumo energético del CPD. 
+Se estima que, en 2020, el consumo de los centros de datos supuso un 1 - 1.5\% de la producción de electricidad global \cite{mytton-dc}. Con la llegada de la pandemia y la transición al trabajo remoto, esta cifra ha aumentado en los últimos dos años; y la tendencia es que continúe en crecimiento. Aunque las arquitecturas modernas necesitan menos energía para operar con un uso bajo, el consumo medio de un rack es de 7 kWh, llegando a picos de incluso 20 kWh por rack \cite{datacenters-density}. Por lo tanto, será esencial mantener bajo control el consumo energético del CPD.
 
 \section{Green IT}
 
@@ -291,13 +291,13 @@ Este método proporciona una forma muy eficaz de enfriamiento para centros de da
 
 \chapter{Conclusiones}
 
-En este trabajo hemos estudiado y desarrollado los sistemas de climatización, junto con los distintos tipos de técnicas de refrigeración: aire, agua e inmersión. De cada uno de estos tipos, hemos detallado las distintas técnicas de refrigeración, incluyendo esquemas gráficos para facilitar la comprensión. También hemos comentado algunas soluciones corporativas; es decir, empresas que poseen productos y maquinaria para simular algunas de las técnicas comentadas. Finalmente, hemos hablado de algunas propuestas que están en vías de desarrollo, pero prometen conseguir unos resultados más eficientes que las actuales. 
+En este trabajo hemos estudiado y desarrollado los sistemas de climatización, junto con los distintos tipos de técnicas de refrigeración: aire, agua e inmersión. De cada uno de estos tipos, hemos detallado las distintas técnicas de refrigeración, incluyendo esquemas gráficos para facilitar la comprensión. También hemos comentado algunas soluciones corporativas; es decir, empresas que poseen productos y maquinaria para simular algunas de las técnicas comentadas. Finalmente, hemos hablado de algunas propuestas que están en vías de desarrollo, pero prometen conseguir unos resultados más eficientes que las actuales.
 
-Con respecto a las diferentes soluciones analizadas, podemos concluir que las técnicas de enfriamiento basadas en refrigeración líquida son las más efectivas. Esto abre las puertas a futuras mejoras de dichas tecnologías, por lo que se deberían investigar más a fondo en el futuro próximo. 
+Con respecto a las diferentes soluciones analizadas, podemos concluir que las técnicas de enfriamiento basadas en refrigeración líquida son las más efectivas. Esto abre las puertas a futuras mejoras de dichas tecnologías, por lo que se deberían investigar más a fondo en el futuro próximo.
 
 Además, debemos evitar las técnicas que requieran una cantidad excesiva de energía; y que como derivados produzcan contaminantes y condensación. Por lo tanto, las técnicas basadas en las Green IT se muestran como una fuerte contrapartida, puesto que son más escalables y limpias. Con estas recomendaciones, podremos reducir el impacto climático y disminuir los costes de consumo de los centros de procesamiento de datos.
 
-Por todos estos motivos, podemos afirmar que hemos logrado los objetivos del trabajo. 
+Por todos estos motivos, podemos afirmar que hemos logrado los objetivos del trabajo.
 
 \begin{figure}%
     \centering
