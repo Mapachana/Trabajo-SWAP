@@ -1,0 +1,80 @@
+% beautiful title slides in Beamer
+% Model 2
+% latex-beamer.com
+
+\documentclass[aspectratio=169, compress]{beamer}
+\usetheme[
+    outer/progressbar=foot, 
+    sectionpage=progressbar,
+    subsectionpage=progressbar, 
+    numbering=counter
+]{metropolis}
+\setbeamertemplate{subsection page}[numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+%\setbeamertemplate{frame footer}{\insertsectionhead}
+\setbeamertemplate{progress bar in head}{\insertsectionhead}
+
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+\useoutertheme[subsection=true]{miniframes} %<<<<<<<<<<<<<<<<
+\setbeamercolor{section in head/foot}{fg=white, bg=mDarkTeal} %<<<<<<<<<<<<<<<<
+\setbeamercolor{subsection in head/foot}{fg=white, bg=mDarkTeal} %<<<<<<<
+
+%\setbeamercolor{title in head/foot}{fg=black, bg=white!50!MSUgreen} %<<<<<<<<<<<<<<<<
+%\setbeamercolor{author in head/foot}{fg=white!85!MSUgreen, bg=MSUgreen}
+
+
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}some text\hfill\insertshortauthor\hfill\insertpagenumber}}
+%\setbeamertemplate{navigation symbols}{}
+
+
+\title{Refrigeración en centros de procesamiento de datos}
+\date{\today}
+\author{Ana Buendía Ruiz-Azuaga \and Andrés Millán Muñoz \and Paula Villanueva Núñez} 
+\institute{Universidad de Granada}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Tabla de contenidos}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents
+\end{frame}
+
+\section{¿Por qué es importante la refrigeración?}    % Preliminares 
+
+\section{Sistemas de refrigeración de CPDs}
+
+\subsection{Basados en aire}
+
+\begin{frame}[fragile]
+    AAAA
+\end{frame}
+
+\subsection{Basados en agua}
+
+\begin{frame}
+    AAAAAAAAA
+\end{frame}
+
+
+\subsection{Basados en inmersión}
+
+\begin{frame}
+    a
+\end{frame}
+
+
+\section{Soluciones propietarias}
+
+\section{Conclusiones}
+
+\end{document}
