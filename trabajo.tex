@@ -1,5 +1,7 @@
 % LTeX: language=spanish
 
+\newpage
+
 \chapter{Introducción}
 
 Con la transición a la computación en la nube, surgen los \textbf{centros de procesamiento de datos} como sistemas de procesamiento principales. Atrás se han quedado los tiempos de los ordenadores personales como principal fuente de trabajo. El auge de estos centros ha creado una carrera por optimizar la capacidad de cómputo por unidad de espacio.
@@ -13,7 +15,7 @@ En este trabajo abordaremos estos dos conceptos: sistemas de refrigeración y su
 Específicamente, vamos a analizar cómo se comportan las diferentes técnicas de refrigeración por aire [\ref{aire}], agua [\ref{awa}] e inmersión [\ref{inmersion}]; comprobaremos algunas de las soluciones que han propuesto diferentes empresas [\ref{empresas}] y exploraremos el futuro de la industria [\ref{futuro}].
 
 
-
+\newpage
 
 \chapter{Preliminares}
 
@@ -76,7 +78,7 @@ Algunas de las acciones que se pueden llevar a cabo para reducir los residuos el
     \end{center}
 \end{figure}
 
-Durante los últimos años se ha hecho especial énfasis en la implantación y puesta en práctica de las Green IT, lo que ha propiciado el nacimiento de empresas específicas para este propósito. Un ejemplo de estas es Equinix \cite{equinix}, quienes ayudan a diseñar los centros de procesamiento de datos para que sean sostenibles medioambientalmente . Para ello, proponen diversas soluciones como el aislamiento térmico o sistemas de iluminación de bajo consumo.
+Durante los últimos años se ha hecho especial énfasis en la implantación y puesta en práctica de las Green IT, lo que ha propiciado el nacimiento de empresas específicas para este propósito. Un ejemplo de estas es Equinix \cite{equinix}, quienes ayudan a diseñar los centros de procesamiento de datos para que sean sostenibles medioambientalmente. Para ello, proponen diversas soluciones como el aislamiento térmico o sistemas de iluminación de bajo consumo.
 
 Actualmente España se encuentra a la cabeza de las invenciones de tecnología verde en Europa, ocupando el sexto lugar. Esto se debe principalmente a la preocupación que se ha extendido en Europa por el cambio climático, lanzando así diversos proyectos para tratar de frenarlo. Esta información puede ampliarse en \cite{efe}.
 
@@ -138,7 +140,7 @@ Una de las ventajas de los pasillos calientes y fríos es que se conserva la ene
 \begin{figure}
     \begin{center}
         \includegraphics[scale=1]{traditional_cooling_diagram}
-        \caption{Diagrama de enfriamiento tradicional.}
+        \caption{Diagrama de enfriamiento tradicional. Fuente: \cite{journal-uptimeinstitute}.}
         \label{traditional_cooling}
     \end{center}
 \end{figure}
@@ -152,7 +154,7 @@ En la imagen \eqref{hot_aisle} podemos observar un esquema del funcionamiento de
 \begin{figure}
     \begin{center}
         \includegraphics[scale=1]{hot_aisle}
-        \caption{Diagrama de cerramiento de pasillo caliente.}
+        \caption{Diagrama de cerramiento de pasillo caliente. Fuente: \cite{journal-uptimeinstitute}.}
         \label{hot_aisle}
     \end{center}
 \end{figure}
@@ -165,9 +167,8 @@ En la imagen \eqref{adiabatic_coolers} se muestra un dispositivo para realizar e
 
 \begin{figure}
     \begin{center}
-        % TODO: añadir referencia de kfocus
         \includegraphics[scale=1]{adiabatic_coolers}
-        \caption{Enfriamientos adiabáticos}
+        \caption{Enfriamientos adiabáticos. Fuente: \cite{Kelvion}.}
         \label{adiabatic_coolers}
     \end{center}
 \end{figure}
@@ -180,13 +181,13 @@ La idea de este método de refrigeración se basa en extraer el calor que se gen
 
 Las unidades CRAC son similares a equipos usuales de aire acondicionado que funcionan gracias a un compresor, el cual atrae aire a través de una unidad cargada con refrigerante. De esta manera, se introduce el aire frío en el CPD.
 
-Son bastante comunes en muchos centros, ya que a pesar de su alto consumo de energía, el coste del equipo es muy bajo. En estas unidades se suelen usar aparatos como \eqref{custom_air_coils}.
+Son bastante comunes en muchos centros, ya que a pesar de su alto consumo de energía, el coste del equipo es muy bajo. En estas unidades se suelen usar aparatos como \eqref{fig:custom_air_coils_air_cooled_condensers}(a).
 
 \subsubsection{Controlador de aire para la sala de ordenadores (CRAH)}
 
 Una unidad CRAH funciona dentro de un sistema más amplio que involucra una planta de agua enfriada. Este agua fluye a través de un conducto de enfriamiento dentro de la unidad, que luego usa ventiladores de modulación para extraer aire del exterior de la instalación. Estos dispositivos serán más eficientes si se usan en lugares con temperaturas más frías, pues tendrán que enfriar menos el aire exterior.
 
-En las CRAH se suelen usar aparatos como \eqref{custom_air_coils}.
+En las CRAH se suelen usar aparatos como \eqref{fig:custom_air_coils_air_cooled_condensers} (a).
 
 \subsubsection{Refrigeración vectorial calibrada (CVC)}
 
@@ -194,11 +195,11 @@ Esta tecnología de enfriamiento está hecha específicamente para servidores de
 
 \subsubsection{Falsos suelos y techos} \label{suelos-techos}
 
-Los suelos y techos técnicos para centros de datos funcionan como paneles que pueden instalarse a distintas alturas, dejando un hueco entre esta instalación y los suelos y techos "reales".
+Los suelos y techos técnicos para centros de datos funcionan como paneles que pueden instalarse a distintas alturas, dejando un hueco entre esta instalación y los suelos y techos ``reales"\.
 
-Es usual que los suelos consistan en rejillas de ventilación, pues son convenientes para servicios de refrigeración, eléctricos y mecánicos. De esta forma, con menos gasto de energía se puede ayudar en la refrigeración de los servidores, por ejemplo centrando las salidas de aire bajo las máquinas.
+Es usual que los suelos consistan en rejillas de ventilación, pues son convenientes para servicios de refrigeración, eléctricos y mecánicos. De esta forma, con menos gasto de energía se puede ayudar a la refrigeración de los servidores, por ejemplo colocando las salidas de aire bajo las máquinas.
 
-También resulta útil para facilitar el acceso al cableado. En este aspecto, el falso techo supone más problemas que el suelo, pues requiere usar guías y escaleras para acceder a él, pero con el falso suelo solo hay que levantar las baldosas y realizar los ajustes necesarios.
+También resulta útil para facilitar el acceso al cableado. En este aspecto, el falso techo supone más problemas que el suelo, pues requiere usar guías y escaleras para acceder a él, mientras que con el falso suelo solo hay que levantar las baldosas y realizar los ajustes necesarios.
 
 Por último, cabe destacar que estos suelos dan flexibilidad, pues pueden instalarse a la altura que se requiera y pueden reutilizarse si se reformara el CPD o se cambiara la localización del mismo.
 
@@ -220,7 +221,7 @@ Este sistema tiene las siguientes componentes:
 
 \subsection{Agua} \label{awa}
 
-Tras comprender cómo actúan los sistemas basados en aire, es momento de cambiar a otro de fluido. En esta sección analizaremos los fundamentos de los sistemas de refrigeración basados en \textbf{agua}.
+Tras comprender cómo actúan los sistemas basados en aire, es momento de cambiar a otro tipo de fluido. En esta sección analizaremos los fundamentos de los sistemas de refrigeración basados en \textbf{agua}.
 
 
 \subsubsection{Sistema de agua helada}
@@ -236,7 +237,7 @@ Esta técnica expone el aire caliente al agua, lo que produce la evaporación de
 
 \subsection{Inmersión} \label{inmersion}
 
-Finalmente, hablaremos brevemente de aquellos métodos basados en la \textbf{inmersión} como principal vía para climatizar los CDP. Existen máquinas muy útiles para este tipo de técnica, como por ejemplo la de la figura \eqref{air_cooled_condensers}.
+Finalmente, hablaremos brevemente de aquellos métodos basados en la \textbf{inmersión} como principal vía para climatizar los CDP. Existen máquinas muy útiles para este tipo de técnica, como por ejemplo la de la figura \eqref{fig:custom_air_coils_air_cooled_condensers} (b).
 
 En este método, el hardware se sumerge en un fluido dieléctrico no conductor y no inflamable, introduciendo tanto el líquido como el hardware en un contenedor a prueba de fugas. De esta manera, el líquido absorbe el calor mientras que el agua caliente se convierte en vapor, para luego condensarse al enfriarse y vuelve al líquido refrigerante, ayudando así a que este se enfríe de nuevo.
 
@@ -252,28 +253,28 @@ Un ejemplo es la empresa Systemair \cite{systemair}, que ofrece una gran varieda
 
 Otra alternativa es Clysema \cite{clysema}, una empresa de servicios energéticos enfocada a mejorar la eficiencia energética de las instalaciones. Ofrecen servicios de gestión y optimización, auditoría, ejecución y mantenimiento.
 
-Algunas empresas están ayudando a innovar la industria de los centros de datos. Algunas de ellas son LiquidStack \cite{liquidstack}, que trabaja con soluciones de enfriamiento por inmersión en 2 fases, mientras Submer \cite{submer} usa refrigeración por inmersión en una sola fase y Green Revolution Cooling \cite{GRC} también trabaja en este campo, pero desde un enfoque más medioambientalmente responsable. 
+Algunas empresas están ayudando a innovar la industria de los centros de datos. Algunas de ellas son LiquidStack \cite{liquidstack}, que trabaja con soluciones de enfriamiento por inmersión en dos fases, mientras Submer \cite{submer} usa refrigeración por inmersión en una sola fase y Green Revolution Cooling \cite{GRC} también trabaja en este campo, pero desde un enfoque más medioambientalmente responsable. 
 
-Por otro lado, Usystems \cite{usystems} trabaja en soluciones de refrigeración en microcentros de datos, y generalmente usa refrigeración por aire, Munters \cite{munters} no solo se ocupa de la refrigeración de centros de procesamiento de datos usando diversos métodos, si no que también proporciona servicios para controlar la humedad y ventilación, y STULZ \cite{stulz} que proporciona sistemas de aire acondicionado.
+Por otro lado, Usystems \cite{usystems} trabaja en soluciones de refrigeración en microcentros de datos, y generalmente usa refrigeración por aire. Munters \cite{munters} no solo se ocupa de la refrigeración de centros de procesamiento de datos usando diversos métodos, sino que también proporciona servicios para controlar la humedad y ventilación, y STULZ \cite{stulz} que proporciona sistemas de aire acondicionado.
 
-La empresa Kelvion \cite{Kelvion} también ofrece métodos eficientes de refrigeración y disipación del calor. En su página web podemos observar todos los dispositivos que ofrece para las distintas técnicas comentadas, como por ejemplo enfriadores secos \eqref{fig:dry_cooler_cooling_tower} (a), Storre de refrigeración \eqref{fig:dry_cooler_cooling_tower} (b), bobinas de aire personalizadas \eqref{fig:custom_air_coils_air_cooled_condensers} (a), condensadores enfriados por aire \eqref{fig:custom_air_coils_air_cooled_condensers} (b), bomba dieléctrica \eqref{dielectric_pump}, etc.
+La empresa Kelvion \cite{Kelvion} también ofrece métodos eficientes de refrigeración y disipación del calor. En su página web podemos observar todos los dispositivos que ofrece para las distintas técnicas comentadas, como por ejemplo enfriadores secos \eqref{fig:dry_cooler_cooling_tower} (a), torre de refrigeración \eqref{fig:dry_cooler_cooling_tower} (b), bobinas de aire personalizadas \eqref{fig:custom_air_coils_air_cooled_condensers} (a), condensadores enfriados por aire \eqref{fig:custom_air_coils_air_cooled_condensers} (b), bomba dieléctrica \eqref{dielectric_pump}, etc.
 
 \begin{figure}%
     \centering
-    \subfloat[][]{\includegraphics[scale=0.7]{dry_cooler}}%
+    \subfloat[][]{\includegraphics[scale=0.7]{dry_cooler}}
     \qquad
     \subfloat[][]{\includegraphics[scale=0.7]{cooling_tower}}
-    \caption{Enfriadores secos (a) y torre de refrigeración (b). Fuente: \cite{Kelvion}}%
+    \caption{Enfriadores secos (a) y torre de refrigeración (b). Fuente: \cite{Kelvion}.}%
     \label{fig:dry_cooler_cooling_tower}%
 \end{figure}
 
 \begin{figure}%
     \centering
-    \subfloat[][]{\includegraphics[scale=0.7]{custom_air_coils}}%
+    \subfloat[][]{\includegraphics[scale=0.7]{custom_air_coils}}
     \qquad
     \subfloat[][]{\includegraphics[scale=0.7]{air_cooled_condensers}}
-    \caption{Bobina de aire personalizadas (a) y condensadores enfriados por aire (b). Fuente: \cite{Kelvion}}%
-    \label{fig:custom_air_coils_air_cooled_condensers}%
+    \caption{Bobina de aire personalizadas (a) y condensadores enfriados por aire (b). Fuente: \cite{Kelvion}.}
+    \label{fig:custom_air_coils_air_cooled_condensers}
 \end{figure}
 
 \begin{figure}[H]
