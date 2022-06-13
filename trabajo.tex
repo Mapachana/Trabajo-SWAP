@@ -60,11 +60,11 @@ Se estima que, en 2020, el consumo de los centros de datos supuso un 1 - 1.5\% d
 
 \section{Green IT}
 
-El consumo de un centro de procesamiento de datos proviene principalmente de su climatización y el equipamiento del mismo.
+El consumo de un centro de procesamiento de datos proviene principalmente del equipamiento del mismo y su climatización.
 
-Con el objetivo de reducir el impacto climático de los centros de procesamiento de datos y disminuir los costes de consumo de los mismos, el Green IT propone diversas estrategias \cite{techtargetgreen}, entre las que se encuentran materiales de construcción de bajo impacto medioambiental, reciclar residuos tecnológicos, uso de energías renovables, consolidación de servidores o virtualización.
+Con el objetivo de reducir el impacto climático de los centros de procesamiento de datos y disminuir los costes de consumo, el Green IT propone diversas estrategias \cite{techtargetgreen}, entre las que se encuentran materiales de construcción de bajo impacto medioambiental, reciclar residuos tecnológicos, uso de energías renovables, consolidación de servidores o virtualización.
 
-El uso correcto de las Green IT proporciona diversas ventajas, entre las que se encuentran la reducción de costes a largo plazo; un menor requerimiento de espacio; así como la reducción de las emisiones de carbono, generación aguas residuales, y consumo de agua y electricidad.
+El uso correcto de las Green IT proporciona diversas ventajas, entre las que se encuentran la reducción de costes a largo plazo; un menor requerimiento de espacio; así como la reducción de las emisiones de carbono, generación de aguas residuales, y consumo de agua y electricidad.
 
 Algunas de las acciones que se pueden llevar a cabo para reducir los residuos electrónicos desde los centros de procesamiento de datos se muestran en \eqref{waste}.
 
@@ -76,27 +76,32 @@ Algunas de las acciones que se pueden llevar a cabo para reducir los residuos el
     \end{center}
 \end{figure}
 
-Durante los últimos años se ha hecho especial énfasis en la implantación y puesta en práctica de las Green IT, lo que ha propiciado a que surjan empresas específicas para este propósito. Un ejemplo de estas es Equinix \cite{equinix}, quierens ayudan a diseñar los centros de procesamiento de datos para que sean medioambientalmente sostenibles. Para ello, proponen diversas soluciones como el aislamiento térmico o sistemas de iluminación de bajo consumo.
+Durante los últimos años se ha hecho especial énfasis en la implantación y puesta en práctica de las Green IT, lo que ha propiciado el nacimiento de empresas específicas para este propósito. Un ejemplo de estas es Equinix \cite{equinix}, quienes ayudan a diseñar los centros de procesamiento de datos para que sean sostenibles medioambientalmente . Para ello, proponen diversas soluciones como el aislamiento térmico o sistemas de iluminación de bajo consumo.
 
 Actualmente España se encuentra a la cabeza de las invenciones de tecnología verde en Europa, ocupando el sexto lugar. Esto se debe principalmente a la preocupación que se ha extendido en Europa por el cambio climático, lanzando así diversos proyectos para tratar de frenarlo. Esta información puede ampliarse en \cite{efe}.
 
 
 
+
+
 \chapter{Desarrollo}
 
-En este capítulo vamos a comentar los distintos tipos de técnicas de refrigeración que hay: aire, agua e inmersión. De cada tipo estudiaremos y desarrollaremos las distintas técnicas que existen, junto a esquemas gráficos que faciliten su comprensión.
+En este capítulo vamos a comentar los distintos tipos de técnicas de refrigeración que existen: aire, agua e inmersión. De cada tipo estudiaremos y desarrollaremos sus distintas variantes, mostrando esquemas gráficos que faciliten su comprensión.
 
 \section{Técnicas de refrigeración}
 
+
+
 \subsection{Aire} \label{aire}
 
-En este apartado estudiaremos las distintas técnicas cuya vía principal para climatizar los CPD es el aire.
+En este apartado estudiaremos las distintas técnicas cuya vía principal para climatizar los CPD es el \textbf{aire}.
+
 
 \subsubsection{Free cooling}
 
-Free cooling \cite{gento} es una técnica efectiva para asegurar que el flujo de temperatura de un centro de procesamiento de datos está funcionando adecuadamente. Esta técnica requiere de un coste mínimo, por lo que reduce los gastos totales de la refrigeración del CPD.
+\textit{Free cooling} \cite{gento} es una método efectivo para asegurar que el flujo de temperatura de un CPD está funcionando adecuadamente. Esta técnica requiere de un coste mínimo, por lo que reduce los gastos totales de la refrigeración del CPD.
 
-Este método se basa en la economización de aire. Para ello se usa el aire del exterior del centro de procesamiento de datos para regular la temperatura de los equipos del interior del CPD, dejándolo entrar a este.
+Este sistema se basa en la economización de aire. Para ello se usa el aire del exterior del centro de procesamiento de datos para regular la temperatura de los equipos del interior del CPD, dejándolo entrar a este.
 
 Generalmente, con el fin de evitar que entre humedad o partículas contaminantes se suele realizar un filtrado del aire.
 
@@ -110,11 +115,11 @@ En la imagen \eqref{free_coling} podemos observar un esquema del funcionamiento 
     \end{center}
 \end{figure}
 
-Esta técnica tiene varias ventajas, pues permite ahorrar y mejora la calidad del aire interior. Sin embargo, requiere de un mínimo consumo y de un mecanismo complejo de ventiladores, compuertas y filtros.
+El \textit{free cooling} tiene varias ventajas, pues permite ahorrar y mejora la calidad del aire interior. Sin embargo, requiere de un mínimo consumo y de un mecanismo complejo de ventiladores, compuertas y filtros.
 
 \subsubsection{Pasillos calientes y fríos}
 
-Esta técnica tiene como objetivo separar por completo el aire frío proveniente del aire acondicionado y el aire caliente que expulsan los equipos. Para ello, se aprovecha el diseño de los racks de servidores y la disposición de los mismos en el centro de procesamiento de datos. Esto es, se alinean los racks en filas alternas (frío/caliente), dejando todas las entradas de aire frío hacia un lado y las salidas de aire caliente hacia el otro. Así, las filas compuestas por frentes de racks se llaman pasillos fríos, que suelen enfrentar a los conductos de salida del aire acondicionado, y la parte trasera de los racks, por donde se expulsa el aire caliente, se denominan pasillos calientes, que suelen conectarse a los conductos de retorno del aire acondicionado.
+Los pasillos calientes y fríos tienen como objetivo separar por completo el aire frío proveniente del aire acondicionado y el aire caliente que expulsan los equipos. Para ello, se aprovecha el diseño de los racks de servidores y la disposición de los mismos en el centro de procesamiento de datos.  Los racks se alinean en filas alternas (frío/caliente), dejando todas las entradas de aire frío hacia un lado y las salidas de aire caliente hacia el otro. Así, las filas compuestas por frentes de racks se llaman pasillos fríos, que suelen enfrentar a los conductos de salida del aire acondicionado; y la parte trasera de los racks (por donde se expulsa el aire caliente) se denominan pasillos calientes, que suelen conectarse a los conductos de retorno del aire acondicionado.
 
 En las imágenes \eqref{pasillos} y \eqref{traditional_cooling} podemos observar unos esquemas del funcionamiento de esta técnica.
 
@@ -126,9 +131,9 @@ En las imágenes \eqref{pasillos} y \eqref{traditional_cooling} podemos observar
     \end{center}
 \end{figure}
 
-Esta técnica suele combinarse con el método de falsos suelos y techos para facilitar el paso del aire.
+Esta técnica suele combinarse con el método de falsos suelos y techos \ref{suelos-techos} para facilitar el paso del aire.
 
-Además, mediante esta técnica se conserva la energía y se reducen los costes de enfriamiento por la gestión del flujo de aire.
+Una de las ventajas de los pasillos calientes y fríos es que se conserva la energía y se reducen los costes de enfriamiento por la gestión del flujo de aire.
 
 \begin{figure}
     \begin{center}
@@ -140,7 +145,7 @@ Además, mediante esta técnica se conserva la energía y se reducen los costes 
 
 \subsubsection{Confinamiento de zonas}
 
-Esta técnica se basa en aislar los pasillos fríos de los calientes mediante la colocación de cerramientos. De esta forma, los pasillos podrán recibir la circulación de los flujos de aire correspondiente sin que se produzca una mezcla de corrientes sin control.
+Una de las claves para aislar los pasillos fríos de los calientes es colocar cerramientos entre ellos. De esta forma, los pasillos podrán recibir la circulación de los flujos de aire correspondiente sin que se produzca una mezcla de corrientes sin control.
 
 En la imagen \eqref{hot_aisle} podemos observar un esquema del funcionamiento de esta técnica.
 
@@ -173,25 +178,23 @@ La idea de este método de refrigeración se basa en extraer el calor que se gen
 
 \subsubsection{Aire acondicionado para la sala de ordenadores (CRAC)}
 
-Las unidades CRAC son similares a equipos usuales de aire acondicionado que funcionan gracias a un compresor, el cual atrae aire a través de una unidad cargada con refrigerante. De esta manera, se introduce el aire frío en el centro de procesamiento de datos.
+Las unidades CRAC son similares a equipos usuales de aire acondicionado que funcionan gracias a un compresor, el cual atrae aire a través de una unidad cargada con refrigerante. De esta manera, se introduce el aire frío en el CPD.
 
-Son bastante comunes en muchos centros de datos, ya que a pesar de su alto consumo de energía, el coste del equipo es muy bajo.
-
-En estas unidades se suelen usar aparatos como \eqref{custom_air_coils}.
+Son bastante comunes en muchos centros, ya que a pesar de su alto consumo de energía, el coste del equipo es muy bajo. En estas unidades se suelen usar aparatos como \eqref{custom_air_coils}.
 
 \subsubsection{Controlador de aire para la sala de ordenadores (CRAH)}
 
-Una unidad CRAH funciona dentro de un sistema más amplio que involucra una planta de agua enfriada. Este agua fluye a través de un conducto de enfriamiento dentro de la unidad, que luego usa ventiladores de modulación para extraer aire del exterior de la instalación. Estas unidades serán más eficientes si se usan en lugares con temperaturas más frías, pues tendrán que enfriar menos el aire exterior.
+Una unidad CRAH funciona dentro de un sistema más amplio que involucra una planta de agua enfriada. Este agua fluye a través de un conducto de enfriamiento dentro de la unidad, que luego usa ventiladores de modulación para extraer aire del exterior de la instalación. Estos dispositivos serán más eficientes si se usan en lugares con temperaturas más frías, pues tendrán que enfriar menos el aire exterior.
 
-En estas unidades se suelen usar aparatos como \eqref{custom_air_coils}.
+En las CRAH se suelen usar aparatos como \eqref{custom_air_coils}.
 
 \subsubsection{Refrigeración vectorial calibrada (CVC)}
 
 Esta tecnología de enfriamiento está hecha específicamente para servidores de alta densidad. Optimiza la ruta del flujo de aire a través del equipo para permitir que el sistema de enfriamiento maneje el calor de manera más efectiva, lo que hace posible aumentar la proporción de placas de circuito por chasis de servidor y utilizar menos \textit{enthusiasts}.
 
-\subsubsection{Falsos suelos y techos}
+\subsubsection{Falsos suelos y techos} \label{suelos-techos}
 
-Los suelos y techos técnicos para centros de datos son suelos y techos que pueden instalarse a distintas alturas, dejando un hueco entre esta instalación y los suelos y techos "reales".
+Los suelos y techos técnicos para centros de datos funcionan como paneles que pueden instalarse a distintas alturas, dejando un hueco entre esta instalación y los suelos y techos "reales".
 
 Es usual que los suelos consistan en rejillas de ventilación, pues son convenientes para servicios de refrigeración, eléctricos y mecánicos. De esta forma, con menos gasto de energía se puede ayudar en la refrigeración de los servidores, por ejemplo centrando las salidas de aire bajo las máquinas.
 
@@ -213,37 +216,43 @@ Este sistema tiene las siguientes componentes:
     \item \textbf{La válvula de expansión}, que actúa como regulador entre el lado de alta y baja presión del sistema y permite la caída de presión y temperatura necesaria para facilitar la expansión directa.
 \end{itemize}
 
+
+
 \subsection{Agua} \label{awa}
 
-En este apartado estudiaremos las distintas técnicas cuya vía principal para climatizar los CDP es el agua.
+Tras comprender cómo actúan los sistemas basados en aire, es momento de cambiar a otro de fluido. En esta sección analizaremos los fundamentos de los sistemas de refrigeración basados en \textbf{agua}.
+
 
 \subsubsection{Sistema de agua helada}
 
-Este método se usa comúnmente en centros de datos de tamaño mediano a grande que usan agua caliente para enfriar el aire que producen los controladores de aire (CRAH). Para ello, se usa una planta enfriadora para suministrar el agua.
+Este método se usa comúnmente en centros de datos de tamaño mediano a grande. Utiliza agua caliente para enfriar el aire que producen los controladores CRAH. Para ello, se usa una planta enfriadora para suministrar el agua.
+
 
 \subsubsection{Enfriamiento evaporativo}
 
 Esta técnica expone el aire caliente al agua, lo que produce la evaporación del agua y así extraer el calor del aire. Este sistema es extremadamente eficiente desde el punto de vista energético, sin embargo utilizará mucha agua.
 
+
+
 \subsection{Inmersión} \label{inmersion}
 
-En este apartado estudiaremos las distintas técnicas cuya vía principal para climatizar los CDP es la inmersión. Existen máquinas muy útiles para este tipo de técnica, como por ejemplo la de la figura \eqref{air_cooled_condensers}.
-
-\subsubsection{Refrigeración por inmersión}
+Finalmente, hablaremos brevemente de aquellos métodos basados en la \textbf{inmersión} como principal vía para climatizar los CDP. Existen máquinas muy útiles para este tipo de técnica, como por ejemplo la de la figura \eqref{air_cooled_condensers}.
 
 En este método, el hardware se sumerge en un fluido dieléctrico no conductor y no inflamable, introduciendo tanto el líquido como el hardware en un contenedor a prueba de fugas. De esta manera, el líquido absorbe el calor mientras que el agua caliente se convierte en vapor, para luego condensarse al enfriarse y vuelve al líquido refrigerante, ayudando así a que este se enfríe de nuevo.
 
-Cabe destacar que esta técnica es muy eficaz, pues el fluido absorbe el calor mucho más eficientemente que el aire.
+El principal punto fuerte de la inmersión es su eficacia, pues el fluido es capaz de absorber el mucho más fácilmente que otros fluidos, como el aire.
+
+
 
 \section{Soluciones corporativas} \label{empresas}
 
 En esta sección presentaremos algunas empresas que se dedican a suministrar los productos necesarios para conseguir soluciones de refrigeración para centros de datos.
 
-Un ejemplo es la empresa Systemair \cite{systemair}, que ofrece una gran variedad de productos en este catálogo para asegurar sistemas de refrigeración energéticamente eficientes, tales como unidades de enfriamiento gratuito, sistemas de enfriamiento evaporativo compacto con pre enfriamiento del aire exterior, condensadores para la expansión directa, etc.
+Un ejemplo es la empresa Systemair \cite{systemair}, que ofrece una gran variedad de productos en este catálogo  energéticamente eficientes, tales como unidades de \textit{free cooling}, sistemas de enfriamiento evaporativo compacto con pre-enfriamiento del aire exterior, condensadores para la expansión directa, etc.
 
 Otra alternativa es Clysema \cite{clysema}, una empresa de servicios energéticos enfocada a mejorar la eficiencia energética de las instalaciones. Ofrecen servicios de gestión y optimización, auditoría, ejecución y mantenimiento.
 
-Otras empresas que están ayudando a innovar la industria de los centros de datos son LiquidStack \cite{liquidstack}, Submer \cite{submer}, Usystems \cite{usystems}, Munters, \cite{munters}, Green Revolution Cooling \cite{GRC}, STULZ \cite{stulz}, etc.
+Algunas empresas están ayudando a innovar la industria de los centros de datos. Algunas de ellas son LiquidStack \cite{liquidstack}, Submer \cite{submer}, Usystems \cite{usystems}, Munters, \cite{munters}, Green Revolution Cooling \cite{GRC} o STULZ \cite{stulz}.
 
 La empresa Kelvion \cite{Kelvion} también ofrece métodos eficientes de refrigeración y disipación del calor. En su página web podemos observar todos los dispositivos que ofrece para las distintas técnicas comentadas, como por ejemplo enfriadores secos \eqref{fig:dry_cooler_cooling_tower} (a), Storre de refrigeración \eqref{fig:dry_cooler_cooling_tower} (b), bobinas de aire personalizadas \eqref{fig:custom_air_coils_air_cooled_condensers} (a), condensadores enfriados por aire \eqref{fig:custom_air_coils_air_cooled_condensers} (b), bomba dieléctrica \eqref{dielectric_pump}, etc.
 
@@ -273,21 +282,28 @@ La empresa Kelvion \cite{Kelvion} también ofrece métodos eficientes de refrige
     \end{center}
 \end{figure}
 
+
+
+
 \section{Futuro} \label{futuro}
 
-Desde hace varios años, los centros de procesamiento de datos han incrementado su potencia y número de servidores significativamente, lo que implica la necesidad de encontrar métodos de enfriamiento más eficaces y eficientes para poder enfriar estos centros de datos.
+Desde hace varios años, los centros de procesamiento de datos han incrementado su potencia y número de servidores significativamente, lo que implica la necesidad de encontrar métodos de enfriamiento más eficaces y eficientes para poder enfriarlos.
 
-Por tanto, actualmente se están investigando nuevas técnicas de enfriamiento que se espera que puedan ponerse en práctica lo antes posible. Principalmente se está trabajando sobre técnicas con refrigeración líquida, ya que son mucho más efectivas, pues los fluidos absorben mejor el calor que el aire.
+Por tanto, actualmente se están investigando nuevas técnicas de enfriamiento que se espera que puedan ponerse en práctica lo antes posible. Principalmente se está trabajando en técnicas basadas en refrigeración líquida, debido a que los fluidos absorben de forma mucho más eficaz el calor en comparación con otros sistemas como el aire.
+
 
 \subsection{Tecnologías de refrigeración líquida}
 
-A diferencia del enfriamiento por aire, que requiere mucha energía e introduce contaminantes y condensación en el centro de datos, un sistema de enfriamiento líquido es más limpio, más escalable y altamente específico. En la actualidad se están desarrollando dos métodos: enfriamiento por inmersión total y enfriamiento directo del chip \cite{datacenters-future}.
+A diferencia del enfriamiento por aire, que requiere mucha energía e introduce contaminantes y condensación en el CPD, un sistema de enfriamiento líquido es más limpio, escalable y resulta altamente específico. En la actualidad se están desarrollando dos métodos: enfriamiento por inmersión total y enfriamiento directo del chip \cite{datacenters-future}.
+
 
 \subsubsection{Refrigeración directa del chip}
 
-La refrigeración directa del chip usa tuberías que transportan el líquido refrigerante directamente a una placa fría que se sitúa encima de los chips de una placa base para extraer el calor. Este calor se lleva a un circuito de agua enfriada para ser transportado de nuevo a la planta de enfriamiento de la instalación. Finalmente es expulsado al exterior.
+La refrigeración directa del chip utiliza tuberías que transportan el líquido refrigerante directamente a una placa fría que se sitúa encima de los chips de una placa base para extraer el calor. Este calor se lleva a un circuito de agua enfriada para ser transportado de nuevo a la planta de enfriamiento de la instalación. Finalmente es expulsado al exterior.
 
-Este método proporciona una forma muy eficaz de enfriamiento para centros de datos que usan mucha potencia y, por tanto, necesitan métodos muy potentes de enfriamiento \cite{datacenters-future}.
+Este método proporciona una forma muy eficaz de enfriamiento para CPDs que consumen mucha energía y, por tanto, necesitan métodos muy potentes de enfriamiento \cite{datacenters-future}.
+
+
 
 \chapter{Conclusiones}
 
