@@ -7,7 +7,7 @@ main.pdf: main.tex pseudo_clean #prepare_bibliography
 	$(MAKE) pseudo_clean
 
 pseudo_clean:
-	rm -f *.aux *.blg *.log *.bbl *.toc *.out *.bcf *.xml *.synctex.gz *.snm *.nav
+	rm -f *.aux *.blg *.log *.bbl *.toc *.out *.bcf *.xml *.synctex.gz *.snm *.nav *.vrb
 	rm -f chapters/*.log
 	rm -f imports/*.aux imports/*.log
 	rm -rf _minted-main
