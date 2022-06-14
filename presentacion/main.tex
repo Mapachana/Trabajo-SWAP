@@ -3,6 +3,7 @@
 % latex-beamer.com
 
 \documentclass[aspectratio=169, compress]{beamer}
+
 \usetheme[
     outer/progressbar=foot, 
     sectionpage=progressbar,
@@ -13,7 +14,8 @@
 \setbeamertemplate{subsection in toc}[subsections numbered]
 %\setbeamertemplate{frame footer}{\insertsectionhead}
 %\setbeamertemplate{progress bar in head}{\insertsectionhead}
-
+\usepackage{natbib}
+\usepackage{bibentry}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{caption}[numbered]
@@ -42,25 +44,84 @@
     \tableofcontents
 \end{frame}
 
-\section{¿Por qué es importante la refrigeración?}    % Preliminares 
+\section{Introducción}    % Preliminares 
+
+\begin{frame}{Introducción}
+    \begin{enumerate}
+        \item \textbf{Centros de procesamiento de datos} en auge por la computación en la nube.
+        \item Aumenta la densidad de componentes por unidad de espacio.
+        \item \textbf{Sistemas de refrigeración} esenciales para disipar el calor generado. 
+    \end{enumerate}    
+\end{frame}
 
 
+\section{Preliminares}
 
+\begin{frame}{Calor generado por el CPD}
+    Los CPDs incluyen hardware muy variado, pero todos generan calor. 
+        
+    El sistema de refrigeración debe reducir la temperatura de todos ellos. 
+
+    Tres vías principales para mover el calor:
+
+    \begin{enumerate}
+        \item \textbf{Aire}.
+        \item \textbf{Agua}.
+        \item \textbf{Inmersión}.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Eficiencia energética}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{enumerate}
+                \item Los sistemas de refrigeración pueden suponer hasta un 40\% del consumo total del CPD. 
+                \item Aunque el hardware de hoy es muy eficiente, la generación calor es inevitable. 
+                \item Importancia de conseguir un sistema de refrigeración eficaz y eficiente. 
+            \end{enumerate}        
+        \end{column}
+        \begin{column}{0.5\textwidth}  
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.5]{../figures/consumo}
+                    \caption{Consumo energético del CPD \eqref{consumo_energetico}.}
+                    \label{consumo_energetico}
+                \end{center}
+            \end{figure}        
+        \end{column}
+    \end{columns}    
+\end{frame}
+
+\begin{frame}{Green IT}
+    Para reducir el impacto medioambiental de los CPDs, se proponen diferentes soluciones:
+
+    \begin{enumerate}
+        \item Materiales de construcción sostenibles.
+        \item Uso de energías renovables.
+        \item Sistemas de refrigeración eficientes.
+    \end{enumerate}
+
+
+\end{frame}
 
 \section{Sistemas de refrigeración de CPDs}
-
-
 
 \subsection{Basados en aire}
 
 \begin{frame}{Free Cooling}
-    AAAA
-\end{frame}
-
-\begin{frame}{Pasillos calentorros y fríos}
     \begin{figure}
         \begin{center}
-            \includegraphics[scale=0.7]{../figures/pasillos}
+            \includegraphics[scale=0.7]{../figures/free_cooling}
+            \caption{Esquema del free cooling.}
+            \label{free_coling}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Pasillos calientes y fríos}
+    \begin{figure}
+        \begin{center}
+            \includegraphics[scale=0.6]{../figures/pasillos}
             \caption{Esquema de los pasillos calientes y fríos. Fuente: \cite{Kelvion}.}
             \label{pasillos}
         \end{center}
@@ -68,73 +129,220 @@
 \end{frame}
 
 \begin{frame}{Confinamiento de zonas}
-    AAAA
+    \begin{figure}
+        \begin{center}
+            \includegraphics[scale=0.6]{../figures/hot_aisle}
+            \caption{Diagrama de cerramiento de pasillo caliente. Fuente: \cite{journal-uptimeinstitute}.}
+            \label{hot_aisle}
+        \end{center}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Refrigeración adiabática}
-    AAAA
+    \begin{itemize}
+        \item Utiliza la baja humedad relativa del aire.
+        \item Incorpora agua y la evapora.
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{In-Rack Heat Extraction}
-    AAAA
-\end{frame}
-
-\begin{frame}{Aire acondicionado para la sala de ordenadores (CRAC)}
-    AAAA
-\end{frame}
-
-\begin{frame}{Controlador de aire para la sala de ordenadores (CRAH)}
-    AAAA
-\end{frame}
-
-\begin{frame}{Refrigeración calibrada CVC}
-    AAAA
+\begin{frame}{CRAC y CRAH}
+    \begin{itemize}
+        \item \textbf{CRAC.} Introducen aire frío.
+        \item \textbf{CRAH.} 
+            \begin{itemize}
+                \item Utilizan una planta de agua enfriada.
+                \item Los ventiladores extraen el aire del exterior.
+            \end{itemize}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Falsos suelos y techos}
-    AAAA
+    \begin{itemize}
+        \item Se instalan a distintas alturas $\rightarrow$ flexibilidad.
+        \item Los suelos suelen ser rejillas de ventilación.
+        \item Facilitan el acceso al cableado.
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Expansión directa}
-    AAAA
+\begin{frame}{Otras técnicas}
+    \begin{itemize}
+        \item In-Rack Heat Extraction.
+        \item Refrigeración vectorial calibrada (CVC).
+        \item Expansión directa (DX cooling).
+    \end{itemize}
 \end{frame}
 
 
 
 \subsection{Basados en agua}
 
-\begin{frame}{Sistema de agua helada}
-    AAAA
-\end{frame}
-
-\begin{frame}{Enfriamiento evaporativo}
-    AAAA
+\begin{frame}{Basados en agua}
+    \begin{itemize}
+        \item \textbf{Sistema de agua helada.} Enfría el aire con agua helada.
+        \item \textbf{Enfriamiento evaporativo.}
+            \begin{enumerate}
+                \item Expone el aire caliente al agua.
+                \item Se evapora el agua.
+                \item Se extrae el calor del aire.
+            \end{enumerate}
+    \end{itemize}
 \end{frame}
 
 
 
 \subsection{Basados en inmersión}
 
-\begin{frame}{Cómo funciona inmersión}
-    a
-\end{frame}
-
-\section{Futuro}
-
-\begin{frame}{Cómo funciona inmersión}
-    a
+\begin{frame}{Cómo funciona la inmersión}
+    \begin{enumerate}
+        \item El hardware se sumerge en un fluido.
+        \item El fluido es dieléctrico, no conductor y no inflamable.
+        \item El líquido absorbe el calor.
+        \item El agua se evapora, se condensa y vuelve al líquido.
+        \item El líquido se enfría.
+    \end{enumerate}
 \end{frame}
 
 \section{Soluciones propietarias}
 
-\begin{frame}{Cómo funciona inmersión}
-    a
+\begin{frame}{Empresas especializadas en refrigeración por aire}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+           
+            \begin{itemize}
+                \item Usystems
+                \item Munters
+                \item Stulz
+            \end{itemize}
+        
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.25]{./figures/usystems}
+                \end{center}
+            \end{figure}
+            
+        \end{column}
+        \begin{column}{0.5\textwidth}  
+            
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.5]{./figures/munters}
+                \end{center}
+            \end{figure}
+        
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.5]{./figures/stulz}
+                \end{center}
+            \end{figure}
+        
+        \end{column}
+    \end{columns}
+
 \end{frame}
+
+\begin{frame}{Empresas especializadas en refrigeración por inmersión}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+           
+            \begin{itemize}
+                \item LiquidStack
+                \item Submer
+                \item Green Revolution Cooling
+            \end{itemize}
+        
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.5]{./figures/liquidstack}
+                \end{center}
+            \end{figure}
+            
+        \end{column}
+        \begin{column}{0.5\textwidth}  
+            
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.35]{./figures/submer}
+                \end{center}
+            \end{figure}
+        
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.35]{./figures/grc}
+                \end{center}
+            \end{figure}
+        
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Otras empresas}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+           
+            \begin{itemize}
+                \item Systemair
+                \item Clysema
+                \item Kelvion
+            \end{itemize}
+        
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.7]{./figures/systemair}
+                \end{center}
+            \end{figure}
+            
+        \end{column}
+        \begin{column}{0.5\textwidth}  
+            
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.35]{./figures/clysema}
+                \end{center}
+            \end{figure}
+        
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.35]{./figures/kelvion}
+                \end{center}
+            \end{figure}
+        
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\section{Futuro}
+
+\begin{frame}{Áreas de investigación}
+    \begin{enumerate}
+        \item Los CPDs han incrementado su potencia y número $\rightarrow$ Búsqueda de métodos de enfriamiento más eficaces y eficientes.
+        \item Principalmente la investigación está enfocada a refrigeración líquida.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Técnicas en investigación}
+    \begin{enumerate}
+        \item Tecnologías de refrigeración líquida
+        \item Refrigeración directa del chip
+    \end{enumerate}
+\end{frame}
+
 
 \section{Conclusiones}
 
-\begin{frame}{Cómo funciona inmersión}
-    a
+\begin{frame}{Conclusiones}
+    \begin{enumerate}
+        \item \textbf{Distintas vías de climatización:} Aire, agua e inmersión.
+        \item Las técnicas de refrigeración basadas en \textbf{refrigeración líquida} son las más \textbf{efectivas}.
+        \item Evitar técnicas que requieran una cantidad excesiva de energía o produzcan contaminantes.
+
+    \end{enumerate}
 \end{frame}
+
+\begin{frame}{Referencias}
+    \bibliography{../bib/library.bib}
+    \bibliographystyle{plain}
+\end{frame}
+
 
 \end{document}
