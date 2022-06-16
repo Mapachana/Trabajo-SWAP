@@ -44,7 +44,10 @@
     \tableofcontents
 \end{frame}
 
-\section{Introducción}    % Preliminares 
+
+
+
+\section{Introducción}    
 
 \begin{frame}{Introducción}
     \begin{enumerate}
@@ -53,6 +56,8 @@
         \item \textbf{Sistemas de refrigeración} esenciales para disipar el calor generado. 
     \end{enumerate}    
 \end{frame}
+
+
 
 
 \section{Preliminares}
@@ -80,6 +85,7 @@
                 \item Importancia de conseguir un sistema de refrigeración eficaz y eficiente. 
             \end{enumerate}        
         \end{column}
+        
         \begin{column}{0.5\textwidth}  
             \begin{figure}
                 \begin{center}
@@ -93,16 +99,17 @@
 \end{frame}
 
 \begin{frame}{Green IT}
-    Para reducir el impacto medioambiental de los CPDs, se proponen diferentes soluciones:
+    Para reducir el impacto medioambiental de los CPDs se proponen diferentes soluciones, como pueden ser
 
     \begin{enumerate}
-        \item Materiales de construcción sostenibles.
+        \item Utilizar materiales de construcción sostenibles.
         \item Uso de energías renovables.
         \item Sistemas de refrigeración eficientes.
     \end{enumerate}
-
-
 \end{frame}
+
+
+
 
 \section{Sistemas de refrigeración de CPDs}
 
@@ -140,20 +147,15 @@
 
 \begin{frame}{Refrigeración adiabática}
     \begin{itemize}
-        \item Utiliza la baja humedad relativa del aire.
-        \item Incorpora agua y la evapora.
+        \item Utiliza la baja humedad relativa del aire para incorporar agua y evaporarla.
     \end{itemize}
-\end{frame}
-
-\begin{frame}{CRAC y CRAH}
-    \begin{itemize}
-        \item \textbf{CRAC.} Introducen aire frío.
-        \item \textbf{CRAH.} 
-            \begin{itemize}
-                \item Utilizan una planta de agua enfriada.
-                \item Los ventiladores extraen el aire del exterior.
-            \end{itemize}
-    \end{itemize}
+    \begin{figure}
+        \begin{center}
+            \includegraphics[scale=0.3]{../figures/adiabatic_coolers}
+            \caption{Enfriamientos adiabáticos. Fuente: \cite{Kelvion}.}
+            \label{adiabatic_coolers}
+        \end{center}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Falsos suelos y techos}
@@ -166,6 +168,8 @@
 
 \begin{frame}{Otras técnicas}
     \begin{itemize}
+        \item CRAC.
+        \item CRAH.
         \item In-Rack Heat Extraction.
         \item Refrigeración vectorial calibrada (CVC).
         \item Expansión directa (DX cooling).
@@ -204,81 +208,60 @@
 
 \section{Soluciones propietarias}
 
-\begin{frame}{Empresas especializadas en refrigeración por aire}
+\begin{frame}{Empresas}
     \begin{columns}
         \begin{column}{0.5\textwidth}
-           
             \begin{itemize}
-                \item Usystems
-                \item Munters
-                \item Stulz
+                \item Especializadas en refrigeración por aire:
+                \begin{itemize}
+                    \item Usystems.
+                    \item Munters.
+                    \item Stulz.
+                \end{itemize}
+
+                \item Especializadas en refrigeración líquida:
+                \begin{itemize}
+                    \item LiquidStack
+                    \item Submer
+                    \item Green Revolution Cooling
+                \end{itemize}
             \end{itemize}
         
-            \begin{figure}
-                \begin{center}
-                    \includegraphics[scale=0.25]{./figures/usystems}
-                \end{center}
-            \end{figure}
             
         \end{column}
-        \begin{column}{0.5\textwidth}  
-            
+        \begin{column}{0.5\textwidth}
             \begin{figure}
                 \begin{center}
-                    \includegraphics[scale=0.5]{./figures/munters}
+                    \includegraphics[scale=0.15]{./figures/usystems}
+                    \includegraphics[scale=0.2]{./figures/munters}
+
                 \end{center}
             \end{figure}
         
             \begin{figure}
                 \begin{center}
-                    \includegraphics[scale=0.5]{./figures/stulz}
+                    \includegraphics[scale=0.2]{./figures/stulz}
+                    \includegraphics[scale=0.2]{./figures/liquidstack}
                 \end{center}
             \end{figure}
-        
+
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=0.2]{./figures/submer}
+                    \includegraphics[scale=0.2]{./figures/grc}
+
+                \end{center}
+            \end{figure}
+
         \end{column}
     \end{columns}
 
 \end{frame}
 
-\begin{frame}{Empresas especializadas en refrigeración por inmersión}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-           
-            \begin{itemize}
-                \item LiquidStack
-                \item Submer
-                \item Green Revolution Cooling
-            \end{itemize}
-        
-            \begin{figure}
-                \begin{center}
-                    \includegraphics[scale=0.5]{./figures/liquidstack}
-                \end{center}
-            \end{figure}
-            
-        \end{column}
-        \begin{column}{0.5\textwidth}  
-            
-            \begin{figure}
-                \begin{center}
-                    \includegraphics[scale=0.35]{./figures/submer}
-                \end{center}
-            \end{figure}
-        
-            \begin{figure}
-                \begin{center}
-                    \includegraphics[scale=0.35]{./figures/grc}
-                \end{center}
-            \end{figure}
-        
-        \end{column}
-    \end{columns}
-\end{frame}
 
 \begin{frame}{Otras empresas}
     \begin{columns}
         \begin{column}{0.5\textwidth}
-           
             \begin{itemize}
                 \item Systemair
                 \item Clysema
@@ -290,10 +273,9 @@
                     \includegraphics[scale=0.7]{./figures/systemair}
                 \end{center}
             \end{figure}
-            
         \end{column}
-        \begin{column}{0.5\textwidth}  
-            
+
+        \begin{column}{0.5\textwidth}      
             \begin{figure}
                 \begin{center}
                     \includegraphics[scale=0.35]{./figures/clysema}
@@ -305,10 +287,11 @@
                     \includegraphics[scale=0.35]{./figures/kelvion}
                 \end{center}
             \end{figure}
-        
         \end{column}
     \end{columns}
 \end{frame}
+
+
 
 
 \section{Futuro}
@@ -326,6 +309,8 @@
         \item Refrigeración directa del chip
     \end{enumerate}
 \end{frame}
+
+
 
 
 \section{Conclusiones}
